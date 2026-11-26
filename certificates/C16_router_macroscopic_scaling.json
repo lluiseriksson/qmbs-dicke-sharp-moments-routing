@@ -1,0 +1,114 @@
+{
+  "cert_id": "C16",
+  "cert_type": "reversible_router_cert",
+  "label": "Subquadratic MSB-to-LSB vs conveyor scaling",
+  "rows": [
+    {
+      "B": 7,
+      "L": 192,
+      "Mp": 128,
+      "beats_conveyor": false,
+      "conveyor_fredkin": 6112,
+      "n": 64,
+      "our_fredkin": 8519,
+      "speedup": [
+        6112,
+        8519
+      ]
+    },
+    {
+      "B": 7,
+      "L": 273,
+      "Mp": 182,
+      "beats_conveyor": false,
+      "conveyor_fredkin": 12376,
+      "n": 91,
+      "our_fredkin": 12488,
+      "speedup": [
+        221,
+        223
+      ]
+    },
+    {
+      "B": 7,
+      "L": 276,
+      "Mp": 184,
+      "beats_conveyor": true,
+      "conveyor_fredkin": 12650,
+      "n": 92,
+      "our_fredkin": 12635,
+      "speedup": [
+        2530,
+        2527
+      ]
+    },
+    {
+      "B": 8,
+      "L": 384,
+      "Mp": 256,
+      "beats_conveyor": true,
+      "conveyor_fredkin": 24512,
+      "n": 128,
+      "our_fredkin": 22536,
+      "speedup": [
+        3064,
+        2817
+      ]
+    },
+    {
+      "B": 9,
+      "L": 768,
+      "Mp": 512,
+      "beats_conveyor": true,
+      "conveyor_fredkin": 98176,
+      "n": 256,
+      "our_fredkin": 57609,
+      "speedup": [
+        98176,
+        57609
+      ]
+    },
+    {
+      "B": 10,
+      "L": 1536,
+      "Mp": 1024,
+      "beats_conveyor": true,
+      "conveyor_fredkin": 392960,
+      "n": 512,
+      "our_fredkin": 143370,
+      "speedup": [
+        39296,
+        14337
+      ]
+    },
+    {
+      "B": 11,
+      "L": 3072,
+      "Mp": 2048,
+      "beats_conveyor": true,
+      "conveyor_fredkin": 1572352,
+      "n": 1024,
+      "our_fredkin": 349195,
+      "speedup": [
+        1572352,
+        349195
+      ]
+    },
+    {
+      "B": 12,
+      "L": 6144,
+      "Mp": 4096,
+      "beats_conveyor": true,
+      "conveyor_fredkin": 6290432,
+      "n": 2048,
+      "our_fredkin": 835596,
+      "speedup": [
+        1572608,
+        208899
+      ]
+    }
+  ],
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "84aebe0b6b7c4e0f7f7156ceba58f92c0cdb469ec03849304cf45702bfadc33e",
+  "subtype": "macroscopic_scaling"
+}

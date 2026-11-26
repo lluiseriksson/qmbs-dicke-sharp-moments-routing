@@ -1,0 +1,43 @@
+{
+  "M": 6,
+  "asari_mu4_ratio": [
+    10,
+    3
+  ],
+  "asari_mu6_ratio": [
+    100,
+    11
+  ],
+  "branch": "6l=2M",
+  "cert_id": "C03",
+  "cert_type": "exact_moment_cert",
+  "excess_var": [
+    25,
+    18
+  ],
+  "kappa4": [
+    5,
+    2
+  ],
+  "kappa6": [
+    275,
+    36
+  ],
+  "l": 2,
+  "label": "Small-M 6l=2M branch (M=6,n=3,l=2)",
+  "mu2": [
+    18,
+    5
+  ],
+  "mu4": [
+    162,
+    5
+  ],
+  "mu6": [
+    1782,
+    5
+  ],
+  "n": 3,
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "3a0253e20dcde0c17cd8f3896b9f538888442689b4e5b8f26e51668eab5fa4b7"
+}

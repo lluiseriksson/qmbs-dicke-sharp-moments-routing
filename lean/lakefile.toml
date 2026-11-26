@@ -1,0 +1,6 @@
+name = "QmbsDickeSharp"
+version = "1.0.0"
+defaultTargets = ["QmbsDickeSharp"]
+
+[[lean_lib]]
+name = "QmbsDickeSharp"

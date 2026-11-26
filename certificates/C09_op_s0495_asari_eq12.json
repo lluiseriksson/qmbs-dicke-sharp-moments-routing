@@ -1,0 +1,47 @@
+{
+  "asari_infidelity_ub": [
+    32019867,
+    160000000
+  ],
+  "asari_p_amp1_lb": [
+    173260895672003289371199,
+    4000000000000000000000000
+  ],
+  "asari_psucc_lb": [
+    1950399,
+    400000000
+  ],
+  "cert_id": "C09",
+  "cert_type": "operating_point_cert",
+  "infidelity_sharpening_ratio": [
+    4927899601,
+    378806000
+  ],
+  "infidelity_ub": [
+    6064658869401,
+    394231968080000
+  ],
+  "label": "Asari Eq. (12) operating point s=0.495",
+  "p_amp1_lb": [
+    241890406996235277399461199,
+    256000000000000000000000000
+  ],
+  "psucc_lb": [
+    295980399,
+    1600000000
+  ],
+  "psucc_sharpening_ratio": [
+    30199,
+    796
+  ],
+  "psucc_ub": [
+    9801,
+    40000
+  ],
+  "s": [
+    99,
+    200
+  ],
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "1d0813e29dfaf65a9e4529c634d1a31fd6763a4817708e33969abd83c11d7ddd"
+}

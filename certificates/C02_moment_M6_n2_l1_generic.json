@@ -1,0 +1,43 @@
+{
+  "M": 6,
+  "asari_mu4_ratio": [
+    2,
+    1
+  ],
+  "asari_mu6_ratio": [
+    30,
+    7
+  ],
+  "branch": "generic",
+  "cert_id": "C02",
+  "cert_type": "exact_moment_cert",
+  "excess_var": [
+    1375,
+    1024
+  ],
+  "kappa4": [
+    75,
+    32
+  ],
+  "kappa6": [
+    875,
+    128
+  ],
+  "l": 1,
+  "label": "Small-M generic branch (M=6,n=2,l=1)",
+  "mu2": [
+    16,
+    5
+  ],
+  "mu4": [
+    24,
+    1
+  ],
+  "mu6": [
+    224,
+    1
+  ],
+  "n": 2,
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "5023b56892cc376eb11e7d32c1560248ff9acb1b4bdd7b3f44670381de2c9fc9"
+}

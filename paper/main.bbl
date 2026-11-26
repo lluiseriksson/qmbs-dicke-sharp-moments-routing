@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{AKN26}
+Yuki Asari, Masaya Kunimi, and Tetsuro Nikuni.
+\newblock Unified preparation of exact and asymptotic quantum many-body scars
+  from {Dicke} states.
+\newblock {\em arXiv preprint arXiv:2611.33987}, 2026.
+
+\bibitem{BE19}
+Andreas B{\"a}rtschi and Stephan Eidenbenz.
+\newblock Deterministic preparation of {Dicke} states.
+\newblock In {\em Fundamentals of Computation Theory (FCT 2019)}, volume 11651
+  of {\em Lecture Notes in Computer Science}, pages 126--139. Springer, 2019.
+
+\bibitem{BHMT02}
+Gilles Brassard, Peter H{\o}yer, Michele Mosca, and Alain Tapp.
+\newblock Quantum amplitude amplification and estimation.
+\newblock {\em Contemporary Mathematics}, 305:53--74, 2002.
+
+\bibitem{GMM23}
+Lorenzo Gotta, Sanjay Moudgalya, and Leonardo Mazza.
+\newblock Asymptotic quantum many-body scars.
+\newblock {\em Physical Review Letters}, 131(19):190401, 2023.
+
+\bibitem{Hoe63}
+Wassily Hoeffding.
+\newblock Probability inequalities for sums of bounded random variables.
+\newblock {\em Journal of the American Statistical Association},
+  58(301):13--30, 1963.
+
+\bibitem{KKK25}
+Masaya Kunimi, Yasuyuki Kato, and Hosho Katsura.
+\newblock Systematic construction of asymptotic quantum many-body scar states
+  and their relation to supersymmetric quantum mechanics.
+\newblock {\em Physical Review Research}, 7(4):043107, 2025.
+
+\end{thebibliography}

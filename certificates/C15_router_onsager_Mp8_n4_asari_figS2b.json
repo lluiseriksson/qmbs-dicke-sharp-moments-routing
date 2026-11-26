@@ -1,0 +1,13 @@
+{
+  "Mp": 8,
+  "cert_id": "C15",
+  "cert_type": "reversible_router_cert",
+  "fixed_n": 4,
+  "label": "Exhaustive Onsager half-filling M'=8, n=4 (Asari Fig S2b)",
+  "max_fredkin_gates": 87,
+  "mode": "onsager",
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "9a76033fe71d15ab918cbaf197612d31326efb02ee43ba1a1dd528e23de39545",
+  "states_checked": 70,
+  "subtype": "exhaustive_replay"
+}

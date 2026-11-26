@@ -1,0 +1,43 @@
+{
+  "M": 1000,
+  "asari_mu4_ratio": [
+    999,
+    250
+  ],
+  "asari_mu6_ratio": [
+    2988009,
+    373501
+  ],
+  "branch": "generic",
+  "cert_id": "C08",
+  "cert_type": "exact_moment_cert",
+  "excess_var": [
+    18609724647,
+    3115625000
+  ],
+  "kappa4": [
+    2997,
+    1000
+  ],
+  "kappa6": [
+    372754371501,
+    24925000000
+  ],
+  "l": 1,
+  "label": "Macroscopic M=1000 half-filling limit",
+  "mu2": [
+    500000,
+    999
+  ],
+  "mu4": [
+    250000000,
+    333
+  ],
+  "mu6": [
+    1867505000000000,
+    996003
+  ],
+  "n": 500,
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "065da78d923afdadd75a6122cf717b1ad74aa3034ffe5c8dbac6b07b26fdb6ad"
+}

@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below."
+title: "Exact Dicke-State Moments, Certified Single-Round Amplification, and Subquadratic Reversible Routing for Asymptotic Quantum Many-Body Scars"
+authors:
+  - family-names: "Eriksson"
+    given-names: "Lluis"
+date-released: "2026-11-26"
+version: "1.0.0"
+license: "MIT"
+repository-code: "https://github.com/lluiseriksson/qmbs-dicke-sharp-moments-routing"

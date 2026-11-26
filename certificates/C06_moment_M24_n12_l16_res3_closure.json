@@ -1,0 +1,43 @@
+{
+  "M": 24,
+  "asari_mu4_ratio": [
+    23,
+    6
+  ],
+  "asari_mu6_ratio": [
+    8740,
+    1089
+  ],
+  "branch": "3l=2M",
+  "cert_id": "C06",
+  "cert_type": "exact_moment_cert",
+  "excess_var": [
+    23805,
+    4864
+  ],
+  "kappa4": [
+    23,
+    8
+  ],
+  "kappa6": [
+    64009,
+    4864
+  ],
+  "l": 16,
+  "label": "Top of 3l=2M finite closure (M=24,n=12,l=16)",
+  "mu2": [
+    288,
+    23
+  ],
+  "mu4": [
+    10368,
+    23
+  ],
+  "mu6": [
+    11290752,
+    437
+  ],
+  "n": 12,
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "878a26f493ffa8545fbfd0cb9283280b00de21d23f5c70b1b202b1349d4aeb5f"
+}

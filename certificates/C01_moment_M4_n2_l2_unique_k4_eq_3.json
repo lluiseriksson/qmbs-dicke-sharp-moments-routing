@@ -1,0 +1,43 @@
+{
+  "M": 4,
+  "asari_mu4_ratio": [
+    9,
+    4
+  ],
+  "asari_mu6_ratio": [
+    45,
+    8
+  ],
+  "branch": "4l=2M",
+  "cert_id": "C01",
+  "cert_type": "exact_moment_cert",
+  "excess_var": [
+    0,
+    1
+  ],
+  "kappa4": [
+    3,
+    1
+  ],
+  "kappa6": [
+    9,
+    1
+  ],
+  "l": 2,
+  "label": "Unique kappa4=3 attainment (4l=2M)",
+  "mu2": [
+    8,
+    3
+  ],
+  "mu4": [
+    64,
+    3
+  ],
+  "mu6": [
+    512,
+    3
+  ],
+  "n": 2,
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "9ffa54b91f4e770fb3a6a763ee88aa4763ef9f45fc5219603571339a98820411"
+}

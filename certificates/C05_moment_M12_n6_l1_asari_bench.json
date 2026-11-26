@@ -1,0 +1,43 @@
+{
+  "M": 12,
+  "asari_mu4_ratio": [
+    11,
+    3
+  ],
+  "asari_mu6_ratio": [
+    297,
+    37
+  ],
+  "branch": "generic",
+  "cert_id": "C05",
+  "cert_type": "exact_moment_cert",
+  "excess_var": [
+    15367,
+    3888
+  ],
+  "kappa4": [
+    11,
+    4
+  ],
+  "kappa6": [
+    22385,
+    1944
+  ],
+  "l": 1,
+  "label": "Asari M=12 half-filling benchmark",
+  "mu2": [
+    72,
+    11
+  ],
+  "mu4": [
+    1296,
+    11
+  ],
+  "mu6": [
+    35520,
+    11
+  ],
+  "n": 6,
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "b6c0e46c7434b9ebb7915d1735d587ee652514c50ed6becae74c5185b8c6dde2"
+}

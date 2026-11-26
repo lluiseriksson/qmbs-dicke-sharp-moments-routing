@@ -1,0 +1,13 @@
+{
+  "Mp": 6,
+  "cert_id": "C14",
+  "cert_type": "reversible_router_cert",
+  "fixed_n": null,
+  "label": "Exhaustive DWC unitary router replay M'=6 (63 states)",
+  "max_fredkin_gates": 78,
+  "mode": "dwc",
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "c60e5802df2dee3ad9efd256b567397965db2e231ce77b8869e044de0d83c4b0",
+  "states_checked": 63,
+  "subtype": "exhaustive_replay"
+}

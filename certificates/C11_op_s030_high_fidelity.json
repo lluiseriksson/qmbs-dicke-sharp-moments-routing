@@ -1,0 +1,51 @@
+{
+  "asari_infidelity_ub": [
+    27,
+    1000
+  ],
+  "asari_p_amp1_lb": [
+    107868996,
+    244140625
+  ],
+  "asari_psucc_lb": [
+    36,
+    625
+  ],
+  "cert_id": "C11",
+  "cert_type": "operating_point_cert",
+  "infidelity_sharpening_ratio": [
+    36481,
+    2135
+  ],
+  "infidelity_ub": [
+    11529,
+    7296200
+  ],
+  "label": "High-fidelity regime s=0.30",
+  "p_amp1_lb": [
+    36556688259,
+    62500000000
+  ],
+  "psucc_lb": [
+    819,
+    10000
+  ],
+  "psucc_sharpening_ratio": [
+    91,
+    64
+  ],
+  "psucc_ub": [
+    9,
+    100
+  ],
+  "s": [
+    3,
+    10
+  ],
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "b0df03595c23919709e5a10331224f2d6258055668260f0ed70f3ab6df31099e",
+  "target_eps": [
+    1,
+    500
+  ]
+}

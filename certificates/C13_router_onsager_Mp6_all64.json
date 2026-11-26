@@ -1,0 +1,13 @@
+{
+  "Mp": 6,
+  "cert_id": "C13",
+  "cert_type": "reversible_router_cert",
+  "fixed_n": null,
+  "label": "Exhaustive Onsager unitary router replay M'=6 (64 states)",
+  "max_fredkin_gates": 87,
+  "mode": "onsager",
+  "schema": "QMBS-DICKE-SHARP-1.0",
+  "sha256": "2c846ef6f96f0922621fcb1619616cf46c86b4ec910864253bd539086a00f506",
+  "states_checked": 64,
+  "subtype": "exhaustive_replay"
+}

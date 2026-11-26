@@ -1,0 +1,85 @@
+{"synthetic": false,
+ "schemaVersion": "2025-09-10",
+ "outputs":
+ {"o": ["a6b98eb5b71f558b.olean"],
+  "m": false,
+  "i": "d721f7097a1af579.ilean",
+  "c": "8022318c5c3eefee.c"},
+ "log":
+ [{"message":
+   ".> LEAN_PATH=D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\.lake\\build\\lib\\lean c:\\Users\\lluis\\.elan\\toolchains\\leanprover--lean4---v4.35.0\\bin\\lean.exe D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\QmbsDickeSharp.lean -o D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\.lake\\build\\lib\\lean\\QmbsDickeSharp.olean -i D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\.lake\\build\\lib\\lean\\QmbsDickeSharp.ilean -c D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\.lake\\build\\ir\\QmbsDickeSharp.c --setup D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\.lake\\build\\ir\\QmbsDickeSharp.setup.json --json",
+   "level": "trace"},
+  {"message":
+   "QmbsDickeSharp.lean:668:0: 'QmbsDickeSharp.quadratic_concave_endpoint_identity' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:669:0: 'QmbsDickeSharp.kurtosis_generic_lt_three' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:670:0: 'QmbsDickeSharp.kurtosis_resonant4_le_three' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:671:0: 'QmbsDickeSharp.kurtosis_resonant4_eq_iff' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:672:0: 'QmbsDickeSharp.sixth_moment_generic_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:673:0: 'QmbsDickeSharp.excess_var_generic_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:674:0: 'QmbsDickeSharp.sixth_moment_res4_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:675:0: 'QmbsDickeSharp.excess_var_res4_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:676:0: 'QmbsDickeSharp.sixth_moment_res6_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:677:0: 'QmbsDickeSharp.excess_var_res6_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:678:0: 'QmbsDickeSharp.sixth_moment_res3_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:679:0: 'QmbsDickeSharp.excess_var_res3_pos' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:680:0: 'QmbsDickeSharp.finite_small_M_resonant_closure' does not depend on any axioms",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:681:0: 'QmbsDickeSharp.grover_one_round_monotone' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:682:0: 'QmbsDickeSharp.operating_points_exact_guarantees' does not depend on any axioms",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:683:0: 'QmbsDickeSharp.msb_lsb_monotone_collision_free' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:684:0: 'QmbsDickeSharp.spacer_isolation_invariant' depends on axioms: [propext, Quot.sound]",
+   "level": "info"},
+  {"message":
+   "QmbsDickeSharp.lean:685:0: 'QmbsDickeSharp.router_beats_conveyor_exact' does not depend on any axioms",
+   "level": "info"}],
+ "inputs":
+ [["deps",
+   [["QmbsDickeSharp/QmbsDickeSharp:extraDep",
+     [["@QmbsDickeSharp:extraDep", "00000000000006bb"]]],
+    ["imports", "00000000000006bb"]]],
+  ["libs",
+   [["import dynlibs", "00000000000006bb"],
+    ["package external libraries", "00000000000006bb"],
+    ["module dynlibs", "00000000000006bb"],
+    ["module plugins", "00000000000006bb"]]],
+  ["Lean 4.35.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc",
+   "407ce514b71d5a10"],
+  ["D:\\Datos\\gemini\\antigravity\\scratch\\airr-frontier-lab\\paper98-qmbs-dicke-sharp-moments-routing\\lean\\QmbsDickeSharp.lean",
+   "1e8f967841da4a8e"],
+  ["options", "00000000000006bb"],
+  ["isModule: false", "feefd2a0d3a1847e"],
+  ["Module.name: QmbsDickeSharp", "c51857a010666bb0"],
+  ["Package.id?: (some QmbsDickeSharp)", "13cf41a30bd6bf67"],
+  ["Module.leanArgs: #[]", "00000000000006bb"]],
+ "depHash": "53230157abfea30d"}
