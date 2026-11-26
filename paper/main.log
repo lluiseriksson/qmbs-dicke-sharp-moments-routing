@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.15)  26 NOV 2026 15:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.7.15)  26 NOV 2026 15:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -646,7 +646,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
 (C:\Users\lluis\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<figures/fig1_dicke_moments_kurtosis.png, id=103, 751.3671pt x 290.0436pt>
+<figures/fig1_dicke_moments_kurtosis.png, id=113, 751.3671pt x 290.0436pt>
 File: figures/fig1_dicke_moments_kurtosis.png Graphic file (type png)
 <use figures/fig1_dicke_moments_kurtosis.png>
 Package pdftex.def Info: figures/fig1_dicke_moments_kurtosis.png  used on input
@@ -654,7 +654,7 @@ Package pdftex.def Info: figures/fig1_dicke_moments_kurtosis.png  used on input
 (pdftex.def)             Requested size: 460.19534pt x 177.64772pt.
  [4{C:/Users/lluis/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}
 ] [5 <./figures/fig1_dicke_moments_kurtosis.png>]
-<figures/fig2_operating_point_grover_sharpening.png, id=131, 751.8489pt x 290.0
+<figures/fig2_operating_point_grover_sharpening.png, id=143, 751.8489pt x 290.0
 436pt>
 File: figures/fig2_operating_point_grover_sharpening.png Graphic file (type png
 )
@@ -664,32 +664,32 @@ ed on input line 233.
 (pdftex.def)             Requested size: 460.19534pt x 177.52821pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 238.
- [6 <./figures/fig2_operating_point_grover_sharpening.png>] [7]
-<figures/fig3_reversible_router_scaling.png, id=156, 752.5716pt x 290.0436pt>
+ [6] [7 <./figures/fig2_operating_point_grover_sharpening.png>] [8]
+<figures/fig3_reversible_router_scaling.png, id=174, 752.5716pt x 290.0436pt>
 File: figures/fig3_reversible_router_scaling.png Graphic file (type png)
 <use figures/fig3_reversible_router_scaling.png>
 Package pdftex.def Info: figures/fig3_reversible_router_scaling.png  used on in
-put line 291.
+put line 295.
 (pdftex.def)             Requested size: 460.19534pt x 177.36005pt.
 LaTeX Font Info:    Font shape `T1/lmtt/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 326.
- [8] [9 <./figures/fig3_reversible_router_scaling.png>]
-(main.bbl) [10] (main.aux)
+(Font)              Font shape `T1/lmtt/b/n' tried instead on input line 330.
+ [9 <./figures/fig3_reversible_router_scaling.png>]
+(main.bbl [10]) [11] [12] (main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 7CDF1CAFDCFE679F489F7B3952FC30BC;2154.
+(rerunfilecheck)             Checksum: AE7386CE512B0BDC55EDB385512F9D59;2511.
  ) 
 Here is how much of TeX's memory you used:
- 14446 strings out of 467871
- 228415 string characters out of 5418376
- 699211 words of memory out of 5000000
- 42730 multiletter control sequences out of 15000+600000
- 748229 words of font info for 268 fonts, out of 8000000 for 9000
+ 14477 strings out of 467871
+ 228776 string characters out of 5418376
+ 704902 words of memory out of 5000000
+ 42736 multiletter control sequences out of 15000+600000
+ 749307 words of font info for 278 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,13n,79p,2453b,664s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,13n,79p,2781b,790s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/lluis/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx10.pf
 b><C:/Users/lluis/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbx12.pf
 b><C:/Users/lluis/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmbxi10.p
@@ -717,9 +717,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtk10.pfb><C:/Users/lluis/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb><C:/Users/lluis/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt9.pfb><C:/Users/lluis/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (10 pages, 1500409 bytes).
+Output written on main.pdf (12 pages, 1523306 bytes).
 PDF statistics:
- 328 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
- 68672 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 357 PDF objects out of 1000 (max. 8388607)
+ 66 named destinations out of 1000 (max. 500000)
+ 68680 words of extra memory for PDF output out of 74296 (max. 10000000)
 

@@ -39,7 +39,7 @@
 \begin{abstract}
 Asari, Kunimi, and Nikuni~\cite{AKN26} recently introduced a unified quantum algorithm that prepares exact and asymptotic quantum many-body scar (AQMBS) states across the spin-1 $XY$, domain-wall-conserving (DWC), and Onsager scar models via block encoding of a cosine-modulated operator $Z(l) = \sum_{j=1}^{M'} f_j(l) Z_j$ on Dicke states $\ket{D_n^{M'}}$, followed by amplitude amplification and a reversible routing isometry $\Phi^{-1}$. Three theoretical gaps remain in their analysis: (i)~sampling-with-replacement Hoeffding relaxations inflate the normalized fourth and sixth moments to $\kappa_4 \le 12$ and $\kappa_6 \le 120$, collapsing the rigorous success-probability guarantee at their operating point $s = 0.495$ to $p_{\mathrm{succ}} \ge 0.00488$; (ii)~the target infidelity $1 - F \le 0.01$ at $s = 0.495$ is verified only numerically for small chains ($M' \le 12$), while their conservative analytical schedule guarantees only $p_{\mathrm{succ}} \ge \sqrt{\varepsilon}/16$; and (iii)~for intermediate scar indices $3 \le n \le M'-2$, no reversible routing circuit $\Phi^{-1}$ better than a $\Theta(M^2)$-gate Fredkin conveyor is identified.
 
-We resolve all three gaps with three original theorems. First (\textbf{Theorem~A}), we derive exact closed-form without-replacement rational formulas for $\langle Z(l)^4 \rangle$ and $\langle Z(l)^6 \rangle$ across all four cosine-sum resonance classes, proving uniformly for all $M' \ge 2$, $1 \le n \le M'-1$, and $1 \le l \le M'-1$ that $\kappa_4 \le 3$ ($4\times$ sharper, with unique finite equality at $(M', n, l) = (4, 2, 2)$), $\kappa_6 < 15$ ($8\times$ sharper), and $\kappa_6 - \kappa_4^2 < 6$. Second (\textbf{Theorem~B}), projecting $\sin(sX)$ onto the optimal linear multiple $(1 - \frac{\kappa_4}{6} s^2) sX$ yields the uniform non-asymptotic infidelity bound $1 - F(s) \le \frac{s^4(4 + 3s^2)}{6(2 - s^2)^2}$ for all $0 < s < \sqrt{2}$ and the two-sided envelope $s^2 - s^4 \le p_{\mathrm{succ}}(s) \le s^2$. At $s = 0.495$, this improves the rigorous $p_{\mathrm{succ}}$ bound by $37.94\times$ (to $0.18499$), certifies $p_{\mathrm{amp}}^{(1)} \ge 0.94488$ in a single Grover round with zero overshoot uniformly over all $(M', n, l)$ ($21.8\times$ above the prior bound), and sharpens the uniform infidelity bound by $13.01\times$ (to $0.01538$); at $s = 0.45$, it certifies $1 - F \le 0.00975 < 0.01$ uniformly with $p_{\mathrm{succ}} \ge 0.16149$ ($25.84\times$ above Eq.~(S11)) and $p_{\mathrm{amp}}^{(1)} \ge 0.8949$. Third (\textbf{Theorem~C}), we construct a strictly order-preserving, collision-free MSB-to-LSB binary-shift reversible routing circuit for both Onsager and DWC spacer-insertion maps $\Phi^{-1}$ using exactly $B(BL - 2^B + 1) = O(M \log^2 n)$ Fredkin gates with zero ancilla leakage, improving asymptotically by $\Theta(M/\log^2 n)$ over the $\Theta(M^2)$ conveyor (achieving $2.74\times$ fewer Fredkin gates at $M' = 1024$ and $7.53\times$ at $M' = 4096$). The algebraic cores of all three theorems—including the concave-quadratic polynomial positivity proofs across all four resonance branches, complete finite-threshold closures, Grover monotonicity, operating-point bounds, and monotone-shift collision freedom—are constructively formalized in Lean~4.35.0 (18 theorems, 0~\texttt{sorry}, 0~\texttt{Classical.choice}), while the real-analytic trigonometric Taylor lifting in Theorem~B is proved analytically and audited alongside 16 SHA-256 exact rational certificates (\texttt{QMBS-DICKE-SHARP-1.0}) via an AST-verified zero-float Python suite (53/53 tests passing).
+We resolve all three gaps with three original theorems. First (\textbf{Theorem~A}), we derive exact closed-form without-replacement rational formulas for $\langle Z(l)^4 \rangle$ and $\langle Z(l)^6 \rangle$ across all four cosine-sum resonance classes, proving uniformly for all $M' \ge 2$, $1 \le n \le M'-1$, and $1 \le l \le M'-1$ that $\kappa_4 \le 3$ ($4\times$ sharper, with unique finite equality at $(M', n, l) = (4, 2, 2)$), $\kappa_6 < 15$ ($8\times$ sharper), and $\kappa_6 - \kappa_4^2 < 6$. Second (\textbf{Theorem~B}), projecting $\sin(sX)$ onto the optimal linear multiple $(1 - \frac{\kappa_4}{6} s^2) sX$ yields the uniform non-asymptotic infidelity bound $1 - F(s) \le \frac{s^4(4 + 3s^2)}{6(2 - s^2)^2}$ for all $0 < s < \sqrt{2}$ and the two-sided envelope $s^2 - s^4 \le p_{\mathrm{succ}}(s) \le s^2$. At $s = 0.495$, this improves the rigorous $p_{\mathrm{succ}}$ bound by $37.94\times$ (to $0.18499$), certifies $p_{\mathrm{amp}}^{(1)} \ge 0.94488$ in a single Grover round with zero overshoot uniformly over all $(M', n, l)$ ($21.8\times$ above the prior bound), and sharpens the uniform infidelity bound by $13.01\times$ (to $0.01538$); at $s = 0.45$, it certifies $1 - F \le 0.00975 < 0.01$ uniformly with $p_{\mathrm{succ}} \ge 0.16149$ ($25.84\times$ above Eq.~(S11)) and $p_{\mathrm{amp}}^{(1)} \ge 0.8949$. Third (\textbf{Theorem~C}), we construct a strictly order-preserving, collision-free MSB-to-LSB binary-shift reversible routing circuit for both Onsager and DWC spacer-insertion maps $\Phi^{-1}$ using exactly $B(BL - 2^B + 1) = O(M \log^2 n)$ Stage-2 Fredkin gates plus at most $B(2M' + 3L) = O(M \log n)$ Stage-1/3 prefix-sum Toffoli gates with zero ancilla leakage, improving asymptotically by $\Theta(M/\log^2 n)$ over the unpruned $\Theta(M^2)$ conveyor for all $3 \le n \le M'-2$ and by $\Theta(n/\log^2 n)$ over the pruned sitewise-displacement lower benchmark $\frac{1}{2}n(2M'-n-1)$ whenever $n = \omega(\log^2 n)$ (achieving permanent half-filling crossovers at $M' = 184$ for Stage-2 Fredkins and $M' = 382$ for total 3-qubit gates, and $7.53\times$ Stage-2 / $5.45\times$ total 3-qubit gate reductions at $M' = 4096$). All explicit six-partition formulas and eight branch polynomials for Theorem~A(ii)--(iii) are tabulated in Appendix~\ref{app:mu6} for standalone verification from this manuscript; the algebraic cores of Theorems~A--C are constructively formalized in Lean~4.35.0 (18 theorems, 0~\texttt{sorry}, 0~\texttt{Classical.choice}), while the real-analytic trigonometric Taylor lifting in Theorem~B is proved analytically and audited alongside 16 SHA-256 exact rational certificates (\texttt{QMBS-DICKE-SHARP-1.0}) via an AST-verified zero-float Python suite (53/53 tests passing).
 \end{abstract}
 
 \section{Introduction and Summary of Contributions}
@@ -83,7 +83,7 @@ Certified $K=1$ Grover $p_{\mathrm{amp}}^{(1)}$ ($s = 0.495$) & $0.0433$ & $\ge 
 Uniform infidelity $1 - F$ ($s = 0.495$) & $\le 0.20012$ (Eq.~S9) & $\le 0.01538$ (Thm.~B) & $13.01\times$ \\
 Certified $p_{\mathrm{succ}}$ at $\varepsilon = 0.01$ & $0.00625$ (Eq.~S11) & $0.16149$ ($s = 0.45$) & $25.84\times$ \\
 Asymptotic $p_{\mathrm{succ}}(\varepsilon)$ ($\varepsilon \to 0$) & $\sqrt{\varepsilon}/16$ & $2\sqrt{\varepsilon} - 4\varepsilon$ & $32\times$ \\
-Reversible router $R$ ($3 \le n \le M'-2$) & $\Theta(M^2)$ Fredkins & $B(BL - 2^B + 1) = O(M\log^2 n)$ & $\Theta(M/\log^2 n)$ \\
+Reversible router $R$ ($3 \le n \le M'-2$) & $\Theta(M^2)$ unpruned & $O(M\log^2 n)$ total 3Q gates & $\Theta(M/\log^2 n)$ \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -139,16 +139,16 @@ Let $a_r \coloneqq \frac{n(n-1)\cdots(n-r+1)}{M'(M'-1)\cdots(M'-r+1)}$ denote th
 \end{equation}
 Dividing by $\mu_2^2 = \frac{4 u^2}{(M'-1)^2}$ and substituting $p_4 = c_4 M'$ gives remarkable algebraic cancellations: for $c_4 = 3/8$ ($4l \neq 2M'$, so $M' \ge 3$), the factor $(M'-3)$ cancels identically, giving $\kappa_4 = \frac{3(M'-1)(2u - M')}{2u(M'-2)}$; for $c_4 = 1/4$ ($4l = 2M'$, $M' \ge 4$), the factor $(M'-2)$ cancels identically, giving $\kappa_4 = \frac{(M'-1)(3u - 2M')}{u(M'-3)}$. Using $4u = M'^2 - (M'-2n)^2$ immediately produces the manifestly nonnegative sum-of-squares identities~\eqref{eq:kappa4_exact}, proving $\kappa_4 \le 3$ with unique finite equality at $(M', n, l) = (4, 2, 2)$ (Lean~4 Theorems~2--4). For $M'=2, n=1, l=1$, $f_1 = -f_2 = 1/\sqrt{2}$ gives $\lambda_T^2 \equiv 2$, hence $\kappa_4 = \kappa_6 = 1$ and $\kappa_6 - \kappa_4^2 = 0$.
 
-For $\mu_6$, expanding $(\sum_{j\in T} f_j)^6$ over all 11 integer partitions of $6$ and reducing each distinct-index sum via $p_1 = 0$ (verified via the conservation check $\sum_{\lambda \vdash 6} c_\lambda s_\lambda = p_1^6 = 0$ in our exact rational verifier) expresses $\mu_6 = 64 \sum_{r=1}^6 a_r \Sigma_r(p_2, p_3, p_4, p_6)$ as an exact rational function of $(M', n)$ on each branch~\eqref{eq:branches}. On every branch, clearing positive denominators in $15 - \kappa_6$ and $6 - (\kappa_6 - \kappa_4^2)$ and substituting $u = (M'^2 - v)/4$ yields an exact quadratic polynomial in $v = (M'-2n)^2 \in [0, D]$ with $D = (M'-2)^2$:
+For $\mu_6$, expanding $(\sum_{j\in T} f_j)^6$ over all 11 integer partitions of $6$ and reducing each distinct-index sum via $p_1 = 0$ (all 11 explicit sums $s_\lambda$ and $\Sigma_1,\dots,\Sigma_6$ are listed in Appendix~\ref{app:mu6} and verified via the conservation check $\sum_{\lambda \vdash 6} c_\lambda s_\lambda = p_1^6 = 0$) expresses $\mu_6 = 64 \sum_{r=1}^6 a_r \Sigma_r(p_2, p_3, p_4, p_6)$ as an exact rational function of $(M', n)$ on each branch~\eqref{eq:branches}. On every branch, clearing positive denominators in $15 - \kappa_6$ and $6 - (\kappa_6 - \kappa_4^2)$ and substituting $u = (M'^2 - v)/4$ yields an exact quadratic polynomial in $v = (M'-2n)^2 \in [0, D]$ with $D = (M'-2)^2$:
 \begin{equation}
-Q(M', v) = A(M') + B(M') v + C(M') v^2.
+Q(M', v) = A(M') + B(M') v + C(M') v^2,
 \end{equation}
-By the exact algebraic identity (Lean~4 Theorem~1)
+whose explicit coefficients $(A, B, C)$ across all eight branch-bound pairs are tabulated in Table~\ref{tab:mu6_polys} of Appendix~\ref{app:mu6}. By the exact algebraic identity (Lean~4 Theorem~1)
 \begin{equation}
 \label{eq:concave_id}
 D \cdot Q(M', v) = (D - v) Q(M', 0) + v Q(M', D) + \bigl(-C(M')\bigr) D v (D - v),
 \end{equation}
-whenever $Q(M', 0) > 0$, $Q(M', D) > 0$, and $-C(M') \ge 0$, strict positivity $Q(M', v) > 0$ holds for every $v \in [0, D]$ (i.e., every $1 \le n \le M'-1$). Substituting $M' = k + M_0$ ($k \ge 0$) produces polynomials with strictly positive constant terms and all nonnegative coefficients in $k$ at the following thresholds:
+whenever $Q(M', 0) > 0$, $Q(M', D) > 0$, and $-C(M') \ge 0$, strict positivity $Q(M', v) > 0$ holds for every $v \in [0, D]$ (i.e., every $1 \le n \le M'-1$). Substituting $M' = k + M_0$ ($k \ge 0$) produces polynomials with strictly positive constant terms and all nonnegative coefficients in $k$ (tabulated explicitly in Table~\ref{tab:mu6_shifted} of Appendix~\ref{app:mu6}) at the following thresholds:
 \begin{itemize}
 \item Branch $\mathcal{G}$ ($M_0 = 4$): both $15 - \kappa_6$ and $6 - (\kappa_6 - \kappa_4^2)$ have $-C(k+4) > 0$ (Lean~4 Theorems~5--6).
 \item Branch $\mathcal{R}_4$ ($M_0 = 6$): both have $-C(k+6) > 0$ (Lean~4 Theorems~7--8).
@@ -251,24 +251,28 @@ so that site $j$ moves to destination $q(j) = j + s_j < L$. Note that $0 \le s_0
 \label{thm:C}
 Let $R$ act on a data register $\mathrm{bit}[0..L-1]$ initialized to $(x_0,\dots,x_{M'-1},0,\dots,0)$ paired with $B$-bit shift ancillas $\mathrm{reg}[0..L-1][0..B-1]$ initialized to $\ket{0}$. Consider the three-stage reversible circuit:
 \begin{enumerate}
-\item \textbf{Prefix-shift initialization:} Compute $s_j$ into $\mathrm{reg}[j]$ for $0 \le j < M'$ via a standard reversible prefix-sum adder tree ($O(M' \log n)$ Toffoli/CNOT gates).
+\item \textbf{Prefix-shift initialization:} Compute $s_j$ into $\mathrm{reg}[j]$ for $0 \le j < M'$ via a reversible ripple-carry running counter ($2B$ temporary counter/carry scratch ancillas and at most $2 B M'$ Toffoli gates).
 \item \textbf{MSB-to-LSB radix routing:} For $b = B - 1, B - 2, \dots, 0$, iterate $p$ in decreasing order from $L - 1 - 2^b$ down to $0$ and apply:
 \begin{enumerate}
 \item[(a)] $B$ Fredkin (CSWAP) gates controlled on $\mathrm{reg}[p][b]$ swapping $\bigl(\mathrm{bit}[p], \{\mathrm{reg}[p][r]\}_{r \neq b}\bigr)$ with $\bigl(\mathrm{bit}[p + 2^b], \{\mathrm{reg}[p + 2^b][r]\}_{r \neq b}\bigr)$;
 \item[(b)] one unconditional $\mathrm{SWAP}$ gate on $\bigl(\mathrm{reg}[p][b], \mathrm{reg}[p + 2^b][b]\bigr)$.
 \end{enumerate}
-\item \textbf{Spacer-masked uncomputation:} Compute the exclusive prefix weight $P_p = \sum_{q < p} \mathrm{bit}[q]$ on the routed output and XOR $P_p$ (Onsager) or $\min(P_p, n-1)$ (DWC) into $\mathrm{reg}[p]$ controlled on $p$ not being a spacer, where $p$ is a spacer if and only if $p \ge 1 \wedge \mathrm{bit}[p-1] = 1$ (and $P_p < n$ for DWC).
+\item \textbf{Spacer-masked uncomputation:} Compute the exclusive prefix weight $P_p = \sum_{q < p} \mathrm{bit}[q]$ on the routed output and XOR $P_p$ (Onsager) or $\min(P_p, n-1)$ (DWC) into $\mathrm{reg}[p]$ controlled on $p$ not being a spacer, where $p$ is a spacer if and only if $p \ge 1 \wedge \mathrm{bit}[p-1] = 1$ (and $P_p < n$ for DWC), reusing the $2B$ temporary counter/carry scratch ancillas (at most $3 B L$ Toffoli gates).
 \end{enumerate}
 Then for every weight-$n$ input $x \in \{0,1\}^{M'}_n$:
 \begin{enumerate}
 \item[\textnormal{(i)}] \textbf{Universal collision freedom:} At every radix stage $b$, the intermediate positions $p_j^{(b)} = j + \lfloor s_j / 2^{b+1} \rfloor 2^{b+1}$ satisfy $p_{j'}^{(b)} - p_j^{(b)} \ge j' - j \ge 1$ for all $j < j'$, and every target control bit $\mathrm{reg}[p + 2^b][b]$ is strictly $0$ prior to each swap step.
-\item[\textnormal{(ii)}] \textbf{Exact output and zero ancilla leakage:} Upon completion, $\mathrm{bit}[0..L-1] = R(x)$ identically and all $L B$ ancilla qubits return deterministically to $\ket{0}$.
-\item[\textnormal{(iii)}] \textbf{Subquadratic Fredkin gate complexity:} Stage~2 uses exactly
+\item[\textnormal{(ii)}] \textbf{Exact output and zero ancilla leakage:} Upon completion, $\mathrm{bit}[0..L-1] = R(x)$ identically and all $L B$ shift ancillas together with the $2B$ temporary prefix-counter/carry scratch ancillas return deterministically to $\ket{0}$.
+\item[\textnormal{(iii)}] \textbf{Subquadratic 3-qubit gate complexity:} Stage~2 uses exactly
 \begin{equation}
 \label{eq:fredkin_count}
 N_{\mathrm{Fredkin}}(L, B) = B\bigl(B L - (2^B - 1)\bigr) = O(M \log^2 n)
 \end{equation}
-Fredkin gates (and $B L - 2^B + 1$ plain SWAPs), strictly beating the conservative $\Theta(M^2)$ conveyor benchmark for all $3 \le n \le M'-2$ at large $M$ (with exact permanent half-filling crossover at $M' = 184$, where $12{,}635 < 12{,}650$, achieving $2.74\times$ fewer Fredkin gates at $M' = 1024$ and $7.53\times$ fewer at $M' = 4096$).
+Fredkin gates (and $B L - 2^B + 1$ plain SWAPs), while Stages~1 and~3 add at most $N_{\mathrm{S1+S3}} \le B(2M' + 3L) = O(M \log n)$ Toffoli gates, giving total 3-qubit count $N_{\mathrm{total}} \le N_{\mathrm{Fredkin}}(L,B) + N_{\mathrm{S1+S3}} = O(M \log^2 n)$. Consequently:
+\begin{itemize}
+\item Against the \emph{unpruned} $\Theta(M^2)$ Fredkin conveyor of~\cite{AKN26} (whose fixed gate sequence depends only on $M$), the router achieves $\Theta(M/\log^2 n)$ asymptotic gate reduction across all intermediate indices $3 \le n \le M'-2$.
+\item Against the \emph{pruned} sitewise-displacement lower benchmark $N_{\mathrm{disp}}(M', n) = \frac{1}{2}n(2M' - n - 1) = \Theta(n M')$, the router achieves $\Theta(n/\log^2 n)$ asymptotic reduction in every super-polylogarithmic sector $n = \omega(\log^2 n)$ (in particular at every fixed filling $n/M' = \rho \in (0, 1)$; for fixed small $n \le 2B^2$, $N_{\mathrm{disp}}$ is already linear in $M'$). At half filling ($n = M'/2$, Onsager $L = 3M'/2$), Stage-2 Fredkins cross $N_{\mathrm{disp}}$ permanently at $M' = 184$ ($12{,}635 < 12{,}650$, reaching $2.74\times$ at $M' = 1024$ and $7.53\times$ at $M' = 4096$), while the conservative total 3-qubit count $N_{\mathrm{total}}$ (including all Stage-1/3 Toffolis) crosses $N_{\mathrm{disp}}$ permanently at $M' = 382$ ($54{,}496 < 54{,}626$, reaching $1.87\times$ at $M' = 1024$, $3.17\times$ at $M' = 2048$, and $5.45\times$ at $M' = 4096$).
+\end{itemize}
 \end{enumerate}
 \end{theorem}
 
@@ -279,17 +283,17 @@ p_{j'}^{(b)} - p_j^{(b)} = (j' - j) + \left(\left\lfloor \frac{s_{j'}}{2^{b+1}} 
 \end{equation}
 (Lean~4 Theorem~16). Thus no two items collide after stage $b$. Consequently, prior to stage $b$, if an active item at $p$ has $\mathrm{reg}[p][b] = 1$, slot $p + 2^b$ cannot hold any non-moving item (as that would collide with the moved item after stage $b$); it can only be empty or hold another mover with $\mathrm{reg}[p+2^b][b] = 1$. Iterating $p$ in decreasing order processes $p + 2^b$ before $p$, so by downward induction $\mathrm{reg}[p + 2^b][b] = 0$ and the entire bundle at $p + 2^b$ is $(0, 0)$ whenever $\mathrm{reg}[p][b] = 1$. Step~2(a) therefore moves all $B$ non-control qubits reversibly to $p + 2^b$, and because $\mathrm{reg}[p+2^b][b] = 0$, the unconditional SWAP in Step~2(b) maps $(1,0) \mapsto (0,1)$ and $(0,0) \mapsto (0,0)$, completing the exact reversible shift of the $(1+B)$-qubit bundle without extra ancillas.
 
-After stage $b = 0$, every site $j$ sits at $q(j) = j + s_j$ carrying $(x_j, s_j)$, and every unoccupied slot is a spacer carrying $(0, 0)$. For Onsager, $c_{j'} \ge c_j + x_j$ implies $q(j) + x_j < q(j')$ for all $j < j'$ (Lean~4 Theorem~17): thus whenever $x_j = 1$, slot $q(j) + 1$ is strictly empty (spacer $0$), no two $1$s are adjacent, and a slot $p$ is a spacer iff $p \ge 1 \wedge \mathrm{bit}[p-1] = 1$. Because all spacers carry $\mathrm{bit} = 0$, the output prefix sum $P_{q(j)} = \sum_{q < q(j)} \mathrm{bit}[q]$ equals $c_j = s_j$ identically on every non-spacer slot (and analogously for DWC with the $P_p < n$ guard on the final excitation). Stage~3 therefore resets all $LB$ ancillas deterministically to $\ket{0}$. Finally, summing $B(L - 2^b)$ over $b = 0, \dots, B-1$ yields $N_{\mathrm{Fredkin}}(L, B) = B(B L - (2^B - 1))$. As a conservative lower-side benchmark for the pruned Fredkin conveyor of~\cite{AKN26}, counting the minimum sitewise displacement budget $\sum_{j=1}^{M'-1} \min(j, n) = \frac{1}{2} n(2M' - n - 1) = \Theta(M^2)$ (which lies below an unpruned right-to-left shift sweep requiring $\approx \frac{7}{8}M'^2$ Fredkins at half filling) already establishes the permanent crossover at $M' = 184$ and the $2.74\times$--$7.53\times$ reductions at $M' = 1024$--$4096$ (Lean~4 Theorem~18).
+After stage $b = 0$, every site $j$ sits at $q(j) = j + s_j$ carrying $(x_j, s_j)$, and every unoccupied slot is a spacer carrying $(0, 0)$. For Onsager, $c_{j'} \ge c_j + x_j$ implies $q(j) + x_j < q(j')$ for all $j < j'$ (Lean~4 Theorem~17): thus whenever $x_j = 1$, slot $q(j) + 1$ is strictly empty (spacer $0$), no two $1$s are adjacent, and a slot $p$ is a spacer iff $p \ge 1 \wedge \mathrm{bit}[p-1] = 1$. Because all spacers carry $\mathrm{bit} = 0$, the output prefix sum $P_{q(j)} = \sum_{q < q(j)} \mathrm{bit}[q]$ equals $c_j = s_j$ identically on every non-spacer slot (and analogously for DWC with the $P_p < n$ guard on the final excitation). Stage~3 therefore resets all $LB$ ancillas deterministically to $\ket{0}$. Finally, summing $B(L - 2^b)$ over $b = 0, \dots, B-1$ yields $N_{\mathrm{Fredkin}}(L, B) = B(B L - (2^B - 1))$. Finally, summing $B(L - 2^b)$ over $b = 0, \dots, B-1$ yields $N_{\mathrm{Fredkin}}(L, B) = B(B L - (2^B - 1))$, while a ripple-carry running $B$-bit counter (using $B$ counter plus $B$ carry ancillas, reset at the end of each pass because total weight $n$ is fixed) executes Stage~1 in at most $2 B M'$ Toffolis and Stage~3 (increment plus spacer-controlled copy) in at most $3 B L$ Toffolis. Comparing against the conservative pruned displacement budget $N_{\mathrm{disp}}(M', n) = \sum_{j=1}^{M'-1} \min(j, n) = \frac{1}{2} n(2M' - n - 1) = \Theta(n M')$ (which lies strictly below the unpruned $\Theta(M^2)$ conveyor of~\cite{AKN26}, requiring $\approx \frac{7}{8}M'^2$ Fredkins at half filling) establishes both the asymptotic $\Theta(n/\log^2 n)$ gain for $n = \omega(\log^2 n)$ and the exact half-filling crossovers at $M' = 184$ (Stage~2, Lean~4 Theorem~18) and $M' = 382$ (total 3-qubit gates, where $34{,}632 + 19{,}864 = 54{,}496 < 54{,}626$).
 \end{proof}
 
 \begin{remark}[Depth and space--time trade-offs]
-In Stage~2, the $2^b$ congruence classes modulo $2^b$ are disjoint, yielding $\sum_{b=0}^{B-1} \lfloor (L-1)/2^b \rfloor < 2L$ sequential bundle-shift steps. Because each bundle shift executes $B$ Fredkin gates sharing the single control qubit $\mathrm{reg}[p][b]$ plus one SWAP, the elementary circuit depth without control fan-out is $< 2(B+1)L = O(M \log n)$ (reducible to $O(M \log\log n)$ with per-step $O(\log\log n)$-depth control fan-out across $B$ targets) with $O(M \log n)$ clean ancillas. Note that Stage~2's in-place decreasing-$p$ sweep cannot itself be parallelized to polylogarithmic depth (a contiguous run of $\Theta(M)$ sites with odd shift $s_j \equiv 1 \pmod 2$ forms a $\Theta(M)$-length dependency chain at $b = 0$); achieving $O(\log^2 M)$ depth instead requires replacing Stage~2 with an out-of-place butterfly or parallel monotone-packing network. For small NISQ chains ($M' \le 182$), the zero-ancilla conveyor uses fewer Fredkin gates, whereas for fault-tolerant scales ($M' \ge 184$) Theorem~C achieves a strictly growing $\Theta(M/\log^2 n)$ asymptotic gate advantage across all intermediate scar indices $3 \le n \le M'-2$.
+In Stage~2, the $2^b$ congruence classes modulo $2^b$ are disjoint, yielding $\sum_{b=0}^{B-1} \lfloor (L-1)/2^b \rfloor < 2L$ sequential bundle-shift steps. Because each bundle shift executes $B$ Fredkin gates sharing the single control qubit $\mathrm{reg}[p][b]$ plus one SWAP, the elementary circuit depth without control fan-out is $< 2(B+1)L = O(M \log n)$ (reducible to $O(M \log\log n)$ with per-step $O(\log\log n)$-depth control fan-out across $B$ targets) using $(L+2)B = O(M \log n)$ clean ancillas (all $LB$ shift qubits plus $2B$ temporary prefix-counter/carry qubits). Note that Stage~2's in-place decreasing-$p$ sweep cannot itself be parallelized to polylogarithmic depth (a contiguous run of $\Theta(M)$ sites with odd shift $s_j \equiv 1 \pmod 2$ forms a $\Theta(M)$-length dependency chain at $b = 0$); achieving $O(\log^2 M)$ depth instead requires replacing Stage~2 with an out-of-place butterfly or parallel monotone-packing network. For small NISQ chains or fixed constant $n \le 2B^2$, a pruned conveyor or particle ladder uses fewer gates, whereas in the fault-tolerant extensive-filling regime ($n/M' = \rho > 0$; $M' \ge 184$ for Stage-2 Fredkins and $M' \ge 382$ for total 3-qubit gates at $\rho = 1/2$) Theorem~C achieves a strictly growing $\Theta(M/\log^2 M)$ gate advantage over both unpruned and pruned conveyors.
 \end{remark}
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\textwidth]{figures/fig3_reversible_router_scaling.png}
-\caption{Theorem~C subquadratic reversible routing $\Phi^{-1}$ vs.\ the conservative $\Theta(M'^2)$ Fredkin conveyor benchmark of~\cite{AKN26}. (a)~Exact Fredkin gate counts at half filling ($n = M'/2$, Onsager $L = 3M'/2$) cross over permanently at $M' = 184$ ($12{,}635 < 12{,}650$), reaching $2.74\times$ reduction at $M' = 1024$ and $7.53\times$ at $M' = 4096$. (b)~Gate reduction ratio across filling fractions $n/M' \in \{1/2, 1/4, 1/8\}$.}
+\caption{Theorem~C subquadratic reversible routing $\Phi^{-1}$ vs.\ the conservative pruned displacement benchmark $N_{\mathrm{disp}} = \frac{1}{2}n(2M'-n-1)$ of~\cite{AKN26}. (a)~Exact Stage-2 Fredkin counts at half filling ($n = M'/2$, Onsager $L = 3M'/2$) cross $N_{\mathrm{disp}}$ permanently at $M' = 184$ ($12{,}635 < 12{,}650$), reaching $2.74\times$ reduction at $M' = 1024$ and $7.53\times$ at $M' = 4096$ (including all Stage-1/3 Toffolis, total 3-qubit gates cross at $M' = 382$ and reach $5.45\times$ at $M' = 4096$). (b)~Stage-2 Fredkin reduction ratio across constant filling fractions $n/M' \in \{1/2, 1/4, 1/8\}$.}
 \label{fig:router}
 \end{figure}
 
@@ -337,5 +341,72 @@ All Lean~4.35.0 proofs, AST-audited zero-float verification code, 16 SHA-256 cer
 
 \bibliographystyle{plain}
 \bibliography{references}
+
+\appendix
+\section{Explicit Sixth-Moment Partition Sums and Branch Polynomials}
+\label{app:mu6}
+
+For complete standalone verifiability of Theorem~A(ii)--(iii) directly from this manuscript, we display all 11 distinct-index partition sums $s_\lambda$ (for $p_1 = 0$) entering $\mu_6 = 64\sum_{r=1}^6 a_r \Sigma_r(p_2, p_3, p_4, p_6)$:
+\begin{align*}
+s_6 &= p_6, & s_{5,1} &= -p_6, \\
+s_{4,2} &= p_4 p_2 - p_6, & s_{3,3} &= p_3^2 - p_6, \\
+s_{4,1,1} &= 2p_6 - p_4 p_2, & s_{3,2,1} &= 2p_6 - p_4 p_2 - p_3^2, \\
+s_{2,2,2} &= p_2^3 - 3p_4 p_2 + 2p_6, & s_{3,1^3} &= -6p_6 + 3p_4 p_2 + 2p_3^2, \\
+s_{2,2,1,1} &= -6p_6 + 5p_4 p_2 + 2p_3^2 - p_2^3, & s_{2,1^4} &= 24p_6 - 18p_4 p_2 - 8p_3^2 + 3p_2^3, \\
+s_{1^6} &= -120p_6 + 90p_4 p_2 + 40p_3^2 - 15p_2^3, & &
+\end{align*}
+with $\Sigma_1 = s_6$, $\Sigma_2 = 6s_{5,1} + 15s_{4,2} + 10s_{3,3}$, $\Sigma_3 = 15s_{4,1,1} + 60s_{3,2,1} + 15s_{2,2,2}$, $\Sigma_4 = 20s_{3,1^3} + 45s_{2,2,1,1}$, $\Sigma_5 = 15s_{2,1^4}$, and $\Sigma_6 = s_{1^6}$ (satisfying $\sum_{r=1}^6 \Sigma_r = p_1^6 = 0$ identically).
+
+Substituting~\eqref{eq:branches}, clearing positive denominators ($2u^2(M'-3)(M'-2)$ and $4u^2(M'-3)(M'-2)^2$ on $\mathcal{G}$; $u^2(M'-5)(M'-3)$ and $u^2(M'-5)(M'-3)^2$ on $\mathcal{R}_4$; $4u^2(M'-5)(M'-4)(M'-2)$ and $2u^2(M'-5)(M'-4)(M'-2)^2$ on $\mathcal{R}_6, \mathcal{R}_3$), and setting $u = (M'^2 - v)/4$ yields the exact quadratic numerators $Q(M', v) = A(M') + B(M') v + C(M') v^2$ (scaled by $16$) in Table~\ref{tab:mu6_polys} and their manifestly positive shifted expansions at $M' = k + M_0$ ($k \ge 0$) in Table~\ref{tab:mu6_shifted}.
+
+\begin{table}[ht]
+\centering
+\caption{Exact branch polynomials $Q(M', v) = A(M') + B(M') v + C(M') v^2$ for $15 - \kappa_6$ and $6 - (\kappa_6 - \kappa_4^2)$ (writing $M$ for $M'$).}
+\label{tab:mu6_polys}
+\scriptsize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}ll>{\raggedright\arraybackslash}p{11.5cm}@{}}
+\toprule
+Branch & Bound & Exact Polynomials $A(M)$, $B(M)$, $C(M)$ \\
+\midrule
+$\mathcal{G}$ & $15{-}\kappa_6$ & $A = 90M^5 - 530M^4 + 980M^3 - 640M^2 + 160M$;\; $B = 60M^2 - 180M$;\; $C = 150 - 90M$ \\
+$\mathcal{G}$ & $6{-}\mathrm{var}$ & $A = 108M^6 - 880M^5 + 2676M^4 - 3760M^3 + 2448M^2 - 640M$;\; $B = 48M^3 - 240M^2 + 288M$;\; $C = -108M^2 + 336M - 276$ \\
+\midrule
+$\mathcal{R}_4$ & $15{-}\kappa_6$ & $A = 30M^5 - 286M^4 + 760M^3 - 512M^2 + 128M$;\; $B = 60M^3 - 180M^2 - 120M$;\; $C = 210 - 90M$ \\
+$\mathcal{R}_4$ & $6{-}\mathrm{var}$ & $A = 18M^6 - 228M^5 + 1002M^4 - 1848M^3 + 1344M^2 - 384M$;\; $B = 36M^4 - 192M^3 + 228M^2 + 120M$;\; $C = -54M^2 + 228M - 270$ \\
+\midrule
+$\mathcal{R}_6$ & $15{-}\kappa_6$ & $A = 180M^6 - 2124M^5 + 8592M^4 - 13944M^3 + 8688M^2 - 2112M$;\; $B = -840M^2 + 2280M$;\; $C = -180M^2 + 1500M - 2040$ \\
+$\mathcal{R}_6$ & $6{-}\mathrm{var}$ & $A = 54M^7 - 756M^6 + 4026M^5 - 10308M^4 + 13320M^3 - 8304M^2 + 2112M$;\; $B = -36M^4 - 24M^3 + 612M^2 - 840M$;\; $C = -54M^3 + 552M^2 - 1314M + 960$ \\
+\midrule
+$\mathcal{R}_3$ & $15{-}\kappa_6$ & $A = 180M^6 - 2076M^5 + 8208M^4 - 12936M^3 + 7632M^2 - 1728M$;\; $B = -80M^4 + 400M^3 - 1400M^2 + 2520M$;\; $C = -100M^2 + 1340M - 1960$ \\
+$\mathcal{R}_3$ & $6{-}\mathrm{var}$ & $A = 54M^7 - 732M^6 + 3786M^5 - 9420M^4 + 11784M^3 - 7056M^2 + 1728M$;\; $B = -40M^5 + 244M^4 - 704M^3 + 1292M^2 - 1080M$;\; $C = -14M^3 + 392M^2 - 1114M + 880$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\caption{Shifted coefficient vectors $[c_0, c_1, \dots, c_d]$ of $P(k) = \sum c_j k^j$ at $M' = k + M_0$ ($k \ge 0$) for $Q_0 = A(M')$, $Q_{\mathrm{end}} = Q(M', (M'-2)^2)$, and $-C(M')$. Every entry is strictly positive (certifying Theorem~A(ii)--(iii) via~\eqref{eq:concave_id} for all $M' \ge M_0$).}
+\label{tab:mu6_shifted}
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llc>{\raggedright\arraybackslash}p{11.0cm}@{}}
+\toprule
+Branch & Bound & $M_0$ & Shifted Positive Coefficient Vectors ($Q_0$, $Q_{\mathrm{end}}$, $-C$) in $k = M' - M_0$ \\
+\midrule
+$\mathcal{G}$ & $15{-}\kappa_6$ & 4 & $Q_0$: $[9600, 21600, 17840, 6900, 1270, 90]$;\; $Q_{\mathrm{end}}$: $[7200, 15600, 11600, 3600, 400]$;\; $-C$: $[210, 90]$ \\
+$\mathcal{G}$ & $6{-}\mathrm{var}$ & 4 & $Q_0$: $[22272, 60672, 65744, 36496, 10996, 1712, 108]$;\; $Q_{\mathrm{end}}$: $[13248, 35328, 35696, 17296, 4048, 368]$;\; $-C$: $[660, 528, 108]$ \\
+\midrule
+$\mathcal{R}_4$ & $15{-}\kappa_6$ & 6 & $Q_0$: $[9120, 23360, 16192, 4696, 614, 30]$;\; $Q_{\mathrm{end}}$: $[16800, 29120, 15232, 3136, 224]$;\; $-C$: $[330, 90]$ \\
+$\mathcal{R}_4$ & $6{-}\mathrm{var}$ & 6 & $Q_0$: $[12384, 44256, 41952, 17880, 3882, 420, 18]$;\; $Q_{\mathrm{end}}$: $[21600, 44640, 32064, 10560, 1632, 96]$;\; $-C$: $[846, 420, 54]$ \\
+\midrule
+$\mathcal{R}_6$ & $15{-}\kappa_6$ & 9 & $Q_0$: $[17130960, 15915252, 6038652, 1199328, 131712, 7596, 180]$;\; $Q_{\mathrm{end}}$: $[7311360, 6162432, 2033472, 328848, 26112, 816]$;\; $-C$: $[3120, 1740, 180]$ \\
+$\mathcal{R}_6$ & $6{-}\mathrm{var}$ & 9 & $Q_0$: $[35668080, 38142636, 17251014, 4281102, 630132, 55056, 2646, 54]$;\; $Q_{\mathrm{end}}$: $[12042240, 11870208, 4799232, 1020096, 120384, 7488, 192]$;\; $-C$: $[5520, 4500, 906, 54]$ \\
+\midrule
+$\mathcal{R}_3$ & $15{-}\kappa_6$ & 12 & $Q_0$: $[169827840, 104825664, 26747568, 3612408, 272448, 10884, 180]$;\; $Q_{\mathrm{end}}$: $[53123840, 29200864, 6363728, 687568, 36848, 784]$;\; $-C$: $[280, 1060, 100]$ \\
+$\mathcal{R}_3$ & $6{-}\mathrm{var}$ & 27 & $Q_0$: $[330812910000, 92768460300, 11141381106, 742858734, 29698140, 711888, 9474, 54]$;\; $Q_{\mathrm{end}}$: $[37626160000, 9250612800, 946863456, 51648432, 1583472, 25872, 176]$;\; $-C$: $[18992, 10564, 742, 14]$ \\
+\bottomrule
+\end{tabular}
+\end{table}
 
 \end{document}
